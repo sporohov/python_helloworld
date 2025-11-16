@@ -11,12 +11,12 @@ list_data = raw_data.split(";")
 name = list_data[0].strip().title()
 art = list_data[1].strip().upper()
 category = list_data[2].strip().title()
-count = float(list_data[3].strip())
-price = int(list_data[4].strip())
+price = float(list_data[3].strip())
+count = int(list_data[4].strip())
 
 print(f"""--- Обработанный товар ---
 Наименование: {name}
 Артикул: {art}
 Категория: {category}
-Цена: {count}
-Количество: {price}""")
+Цена: {price}
+Количество: {count}""")
