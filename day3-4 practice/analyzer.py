@@ -17,14 +17,16 @@ for item in cart_items:
         valid_items.append(item)
     else:
         print(f"Проблема с товаров {item.get("product_name", "[Товар не найден]")} некорректное количество или цена")
-        continue
 
 grand_total = 0
 grand_quantity = 0
 
-for index, item in enumerate(valid_items):
-    print(f"{index + 1}. {item["product_name"]} - {item["quantity"]} шт., стоимость: {item["price"]}")
-    grand_total = grand_total + item.get("price", 0)
+for index, item in enumerate(valid_items, start=1):
+
+    prices = item.get("quantity", 0) * item.get("price", 0)
+
+    print(f"{index}. {item["product_name"]} - {item.get("quantity", 0)} шт., стоимость: {prices}")
+    grand_total = grand_total + prices
     grand_quantity = grand_quantity + item.get("quantity", 0)
 
 print("-----------------------")
