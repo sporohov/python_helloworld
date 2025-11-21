@@ -12,7 +12,8 @@ def filter_valid_items(items: list) -> list:
 
 def calculate_totals(items: list) -> dict:
     
-    grand_total = 0    grand_quantity = 0
+    grand_total = 0
+    grand_quantity = 0
 
     for item in items:
         sum_line = item.get("quantity", 0) * item.get("price", 0)

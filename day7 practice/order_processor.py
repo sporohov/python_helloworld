@@ -47,7 +47,7 @@ def print_order_report(order_lines: list, totals: dict):
     for line in order_lines:
         print(
             f"- {line['name']}: {line['quantity']} шт. x {line['price']} руб. "
-            f"| Итого: {line['total_price_with_vat']:.2f} руб." # !!! Потенциальная ошибка №3 (в форматировании)
+            f"| Итого: {line['total_price_with_vat']} руб." # !!! Потенциальная ошибка №3 (в форматировании)
         )
 
     print("-"*40)
